@@ -15,7 +15,7 @@ jobs:
         id: source-app-token
         with:
           app-id: ${{ vars.SOURCE_APP_ID }}
-          private-key: ${{ secrets.SOURCE_PRIVATE_KEY }}
+          private-key: ${{ secrets.SOURCE_APP_PRIVATE_KEY }}
           owner: ${{ github.repository_owner }}
 
       # target
@@ -23,7 +23,7 @@ jobs:
         id: targetapp-token
         with:
           app-id: ${{ vars.TARGET_APP_ID }}
-          private-key: ${{ secrets.TARGET_PRIVATE_KEY }}
+          private-key: ${{ secrets.TARGET_APP_PRIVATE_KEY }}
           owner: joshjohanning-emu
 
       - name: Bulk GitHub Repository Sync
