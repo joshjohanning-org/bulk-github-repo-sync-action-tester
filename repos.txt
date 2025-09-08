@@ -1,0 +1,21 @@
+repos:
+  - source: synopsys-sig/detect-action
+    target: joshjohanning-emu/synopsys-detect-action
+    visibility: private # visibility defaults to private if not specified
+    disable-github-actions: true # defaults to TRUE if not specified
+    archive-after-sync: true # defaults to FALSE if not specified
+  - source: jfrog/setup-jfrog-cli
+    target: joshjohanning-emu/setup-jfrog-cli
+    visibility: internal
+  - source: SonarSource/sonarqube-scan-action
+    target: joshjohanning-emu/sonarqube-scan-action
+  - source: azure/login
+    target: joshjohanning-emu/azure-login
+    visibility: private
+  - source: joshjohanning/approveops
+    target: joshjohanning-emu/approveops
+    visibility: private
+  - source: joshjohanning-org/test-repo-updates
+    target: joshjohanning-emu/test-repo-updates
+    visibility: internal
+    disable-github-actions: false
