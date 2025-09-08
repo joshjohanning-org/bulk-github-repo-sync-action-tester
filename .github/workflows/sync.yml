@@ -27,9 +27,9 @@ jobs:
           owner: joshjohanning-emu
 
       - name: Bulk GitHub Repository Sync
-        uses: joshjohanning-org/bulk-github-repo-sync-action@v0
+        uses: joshjohanning/bulk-github-repo-sync-action@v0
         with:
-          repo-list-file: actions-list.yml
+          repo-list-file: repos.yml
           source-github-token: ${{ steps.source-app-token.outputs.token }}
           target-github-token: ${{ steps.target-app-token.outputs.token }}
           overwrite-repo-visibility: true # overwrite repo visibility with what is in yml file; defaults to false
