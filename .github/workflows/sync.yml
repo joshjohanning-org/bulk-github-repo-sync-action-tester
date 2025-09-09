@@ -26,6 +26,10 @@ jobs:
           private-key: ${{ secrets.TARGET_APP_PRIVATE_KEY }}
           owner: joshjohanning-emu
 
+      - run: gh repo create --private joshjohanning-emu/test11119
+        env:
+          GH_TOKEN: ${{ steps.target-app-token.outputs.token }}
+
       - name: Bulk GitHub Repository Sync
         uses: joshjohanning/bulk-github-repo-sync-action@v1
         with:
