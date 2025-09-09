@@ -2,6 +2,9 @@ name: repo-sync
 
 on:
   workflow_dispatch:
+  schedule:
+    - cron: '30 1 * * *' # runs once a day
+    # - cron: '*/15 * * * *' # every 15 minutes
 
 jobs:
   sync:
@@ -27,10 +30,6 @@ jobs:
           app-id: ${{ vars.TARGET_APP_ID }}
           private-key: ${{ secrets.TARGET_APP_PRIVATE_KEY }}
           owner: joshjohanning-emu
-
-      # - run: gh repo create --private joshjohanning-emu/test11119
-      #   env:
-      #     GH_TOKEN: ${{ steps.target-app-token.outputs.token }}
 
       - name: Bulk GitHub Repository Sync
         uses: joshjohanning/bulk-github-repo-sync-action@v1
