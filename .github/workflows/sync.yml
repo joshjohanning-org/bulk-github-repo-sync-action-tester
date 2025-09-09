@@ -27,7 +27,7 @@ jobs:
           owner: joshjohanning-emu
 
       - name: Bulk GitHub Repository Sync
-        uses: joshjohanning/bulk-github-repo-sync-action@v0
+        uses: joshjohanning/bulk-github-repo-sync-action@v1
         with:
           repo-list-file: repos.yml
           source-github-token: ${{ steps.source-app-token.outputs.token }}
